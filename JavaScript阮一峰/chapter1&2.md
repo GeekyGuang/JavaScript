@@ -109,4 +109,12 @@ s[4] // "o"
 var s = 'hello';
 s.length // 5
 ```
+14. JavaScript 使用 Unicode 字符集。JavaScript 引擎内部，所有字符都用 Unicode 表示。
+每个字符在 JavaScript 内部都是以16位（即2个字节）的 UTF-16 格式储存。
+
+15. Base64转码(仅适用ASCII码)
+```
+btoa()：任意值转为 Base64 编码
+atob()：Base64 编码转为原来的值
+```
 
