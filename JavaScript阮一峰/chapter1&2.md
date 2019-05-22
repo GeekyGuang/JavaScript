@@ -2,6 +2,7 @@
    ctrl + L         clear console
    shift + Enter    换行
    Enter            运行
+   F5               重启console
 
 1. 1995年5月，Brendan Eich 只用了10天，就设计完成了这种语言的第一版。它是一个大杂烩，语法有多个来源。
 
@@ -57,20 +58,7 @@ Number(undefined) // NaN
 // 0.09999999999999998
 ```
 
-9. Inifinity
-Infinity大于一切数值（除了NaN），-Infinity小于一切数值（除了NaN）
-Infinity与NaN比较，总是返回false
-
-10. 与数值相关的全局方法
-```
-parseInt()    // 字符串转整数
-parseFloat()  // 字符串转浮点数
-isNaN()       // 判断是否是NaN，只对数字有效，若传入字符串则返回true
-isNaN('hello') // true
-isFinite()    // 判断是否是正常的数值
-```
-
-11. 字符串
+9. 字符串
 由于 HTML 语言的属性值使用双引号，所以很多项目约定 JavaScript 语言的字符串只使用单引号
 ```
 // 用\将字符串拆分多行
@@ -92,32 +80,7 @@ var longString = 'Long'
 longString
 --> "Longlonglongstring"
 ```
-
-12. 字符串和数组的关系(仅此而已)
-```
-var s = 'hello';
-s[0] // "h"
-s[1] // "e"
-s[4] // "o"
-
-// 直接对字符串使用方括号运算符
-'hello'[1] // "e"
-```
-
-13. length属性
-```
-var s = 'hello';
-s.length // 5
-```
-14. JavaScript 使用 Unicode 字符集。JavaScript 引擎内部，所有字符都用 Unicode 表示。
-每个字符在 JavaScript 内部都是以16位（即2个字节）的 UTF-16 格式储存。
-
-15. Base64转码(仅适用ASCII码)
-```
-btoa()：任意值转为 Base64 编码
-atob()：Base64 编码转为原来的值
-```
-16. 对象object
+10. 对象object
 ```
 // 对象就是一组“键值对”（key-value）的集合，是一种无序的复合数据集合。
 var obj = {
@@ -132,34 +95,7 @@ var obj = {
 };
 ```
 
-17. 对象的引用
-如果不同的变量名指向同一个对象，那么它们都是这个对象的引用，也就是说指向同一个内存地址。修改其中一个变量，会影响到其他所有变量。
-```
-var o1 = {};
-var o2 = o1;
+11. 
 
-o1.a = 1;
-o2.a // 1
 
-o2.b = 2;
-o1.b // 2
-```
-
-18. 属性读取
-读取对象的属性，有两种方法，一种是使用点运算符，还有一种是使用方括号运算符。
-如果使用方括号运算符，键名必须放在引号里面，否则会被当作变量处理。
-```
-var obj = {
-  p: 'Hello World'
-};
-
-obj.p // "Hello World"
-obj['p'] // "Hello World"
-
-obj['hello' + ' world']
-obj[3 + 3]
-obj['0.7'] 
-obj[0.7]
-obj[123] // 数值键名必须放在方括号内，可以不加引号
-```
 
