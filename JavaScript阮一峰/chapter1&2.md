@@ -95,7 +95,36 @@ var obj = {
 };
 ```
 
-11. 
+11. 将函数赋值给一个变量，则这个变量也是函数
+```
+function add(x, y) {
+  return x + y;
+}
 
+// 将函数赋值给一个变量
+var operator = add;
 
+operator(1,2); // 3
+
+function a(op){
+  return op;
+}
+a(operator)(1, 1)  //将函数做为参数和返回值
+// 2
+```
+
+12. 用变量赋值法声明函数
+```
+// 这里f是变量，function后未给出函数名，所以是将匿名函数赋值给变量
+var f = function(s) {   
+  console.log(s);
+};   // 这又称函数表达式，所以要加分号
+
+f('hello');
+// hello
+
+var f3 = function myName() {};  // 当然也可以赋值具名函数，但myName函数名不能被外部调用
+```
+
+13. 
 
