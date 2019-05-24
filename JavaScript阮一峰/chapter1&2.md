@@ -1,4 +1,4 @@
-0. ctrl + shift + J 打开Console
+0. ctrl + shift + J 或 F12 或 右键'检查' ctrl + shift + I 打开Console三种方式
    ctrl + L         clear console
    shift + Enter    换行
    Enter            运行
