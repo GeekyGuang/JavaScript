@@ -6,7 +6,7 @@
 </head>
 <body>
     <script>
-        var degFahren = parseInt(prompt("Please enter the degrees Fahrenheit", 50));
+        var degFahren = parseInt(prompt("Please enter the degrees Fahrenheit", 50), 10);  // 不加基数10也会默认按10进制转换
         var degCen = 5 / 9 * (degFahren - 32);
 
         document.write(degFahren + "\xB0 Fahrenheit is " + degCen + "\xB0 Centigrade <br/>" );
