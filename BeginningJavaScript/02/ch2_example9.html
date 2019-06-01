@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex9</title>
+</head>
+<body>
+    <script>
+        var myArray = [];  // JS只支持一维数组，但是可以模拟二维数组
+
+        myArray[0] = [];
+        myArray[0][0] = 'name0';
+        myArray[0][1] = 'age0';
+        myArray[0][2] = 'address0';
+
+        myArray[1] = [];
+        myArray[1][0] = 'name1';
+        myArray[1][1] = 'age1';
+        myArray[1][2] = 'address1';
+
+        myArray[2] = [];
+        myArray[2][0] = 'name0';
+        myArray[2][1] = 'age0';
+        myArray[2][2] = 'address0';
+
+        document.write(myArray[0] + "<br/>");
+        document.write("name1: " + myArray[1][0] + "<br/>" + " age1: "
+                     + myArray[1][1] + "<br/>" + " address1: " + myArray[1][2]);
+
+
+    </script>
+</body>
+</html>
