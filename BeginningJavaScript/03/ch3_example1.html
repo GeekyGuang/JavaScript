@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex1</title>
+</head>
+<body>
+    <script>
+        var degFahren = parseInt(prompt("Please enter the degrees Fahrenheit", 50));
+        var degCen = 5 / 9 * (degFahren - 32);
+
+        document.write(degFahren + "\xB0 Fahrenheit is " + degCen + "\xB0 Centigrade <br/>" );
+
+        if (degCen < 0) {
+            document.write("That's below the freezing point of water.");
+        }
+
+        if (degCen == 100) {
+            document.write("That's the boiling point of water.");
+        }
+    </script>
+</body>
+</html>
