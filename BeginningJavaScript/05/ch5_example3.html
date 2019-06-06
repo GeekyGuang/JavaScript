@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ch5, example3</title>
+</head>
+<body>
+    <script>
+        var myShopping = ['Eggs', 'Milk', 'Potatos', 'Cereal', 'Bananas'];
+
+        var ord = prompt("Enter 1 for alphabet order " + 
+                         "and -1 for reverse order", 1);
+        
+        if (ord == 1) {
+            myShopping.sort();  // 直接作用在数组本身
+            document.write(myShopping.join("<br/>"));
+        } else if (ord == -1) {
+            myShopping.sort();
+            myShopping.reverse();
+            document.write(myShopping.join("<br/>"));
+        } else {
+            document.write("That is not a valid input");
+        }
+        /*
+        var names = [];  // name不能当数组名
+        names[0] = 1;
+        names[1] = 2;
+        names[12] = "Hello";
+        document.write(names[names.length - 1] + "<br/>");
+
+        names.push("a");  //在数组末尾插入
+        names.push("b");
+        names.push(8384);
+
+        document.write(names + "<br/>");
+
+        var ages = [22, 23, 25];
+
+        names = names.concat(ages);  //合并两个数组
+        document.write(names + "<br/>");
+
+        var sliceArray = names.slice(12, 14);
+        document.write(sliceArray);
+
+        var myShopping = ['Eggs', 'Milk', 'Potatos', 'Cereal', 'Bananas'];
+        var myShoppingList = myShopping.join("<br/>"); //将数组连接为字符串，可在元素间插入字符
+        document.write(myShoppingList);
+        
+
+        var names = ["Micky", "Andy", "Paul", "Bob", "Sarah"];
+        names.sort();
+        for (var index = 0; index < names.length; index++) {
+            document.write(names[index] + "<br/>");
+        }
+
+        names.reverse();
+        var namesReverse = names.join("<br/>");
+        document.write(namesReverse);
+        */
+    </script>
+</body>
+</html>

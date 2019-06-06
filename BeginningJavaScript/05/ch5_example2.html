@@ -8,13 +8,25 @@
     <script>
         function checkCharType(charToCheck) {
             var returnValue = 'O';
-            var charCode = charToCheck.charCodeAt(0);
+            /*
+            var char = charToCheck.charAt(0);
 
-            if (charCode >= 'A'.charCodeAt(0) && charCode <= 'Z'.charCodeAt(0)) {
+            if (char >= 'A'.charAt(0) && char <= 'Z'.charAt(0)) {
                 returnValue = 'U';
-            } else if (charCode >= 'a'.charCodeAt(0) && charCode <= 'z'.charCodeAt(0)) {
+            } else if (char >= 'a'.charAt(0) && char <= 'z'.charAt(0)) {
                 returnValue = 'L';
-            } else if (charCode >= '0'.charCodeAt(0) && charCode <= '9'.charCodeAt(0)) {
+            } else if (char >= '0'.charAt(0) && char <= '9'.charAt(0)) {
+                returnValue = 'N';
+            } 
+            */
+
+            var char = charToCheck.charAt(0);
+
+            if (char >= 'A' && char <= 'Z') {
+                returnValue = 'U';
+            } else if (char >= 'a' && char <= 'z') {
+                returnValue = 'L';
+            } else if (char >= '0' && char <= '9') {
                 returnValue = 'N';
             } 
 
