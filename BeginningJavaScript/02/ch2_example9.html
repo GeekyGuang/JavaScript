@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ch2, example 9</title>
+</head>
+<body>
+    <script>
+        var personnel = [];
+        
+        personnel[0] = [];
+        personnel[0][0] = "Name0";
+        personnel[0][1] = "Age0";
+        personnel[0][2] = "Address0";
+
+        personnel[1] = ["Name1", "Age1", "Address1"];
+
+        document.write("personnel: " + personnel + "<br/>");
+        document.write("Name: " + personnel[1][0] + "<br/>");
+        document.write("Age: " + personnel[1][1] + "<br/>");
+        document.write("Address: " + personnel[1][2]);
+    </script>
+</body>
+</html>
