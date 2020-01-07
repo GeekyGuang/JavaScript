@@ -61,5 +61,78 @@ typeof null // "object" 历史原因造成的
 typeof undefined // "undefined"
 ```
 
+`null`是一个表示“空”的对象，转为数值时为`0`；`undefined`是一个表示"此处无定义"的原始值，转为数值时为`NaN`。
+
+#### 布尔值
+
+```javascript
+if ('') {
+  console.log('true');
+}
+// 没有任何输出
+
+// 空数组（[]）和空对象（{}）对应的布尔值，都是true
+if ([]) {
+  console.log('true');
+}
+// true
+
+if ({}) {
+  console.log('true');
+}
+// true
+```
+
+JavaScript 内部，所有数字都是以64位浮点数形式储存，即使整数也是如此。
+
+#### NaN
+
+`NaN`不是独立的数据类型，而是一个特殊数值，它的数据类型依然属于`Number`.
+
+NaN是用来表示不是数值的数值
+
+```javascript
+0 / 0 // NaN
+Boolean(NaN) // false
+```
+
+#### Infinity
+
+```javascript
+0 * Infinity // NaN
+0 / Infinity // 0
+Infinity / 0 // Infinity
+```
+
+#### 数值方法
+
+```javascript
+parseInt() //字符串转换为整数
+parseInt('1000') // 1000
+// 等同于
+parseInt('1000', 10) // 1000 
+
+
+//字符串转换为浮点数
+parseFloat('3.14') // 3.14 
+
+isNaN(NaN) // true
+isNaN(123) // false
+
+NaN !== NaN
+
+isFinite(Infinity) // false
+isFinite(-Infinity) // false
+isFinite(NaN) // false
+isFinite(undefined) // false
+isFinite(null) // true
+isFinite(-1) // true
+```
+
+
+
+
+
+
 
 
