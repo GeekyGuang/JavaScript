@@ -129,7 +129,62 @@ isFinite(null) // true
 isFinite(-1) // true
 ```
 
+如果在非特殊字符前面使用反斜杠，则反斜杠会被省略。
 
+```javascript
+'\a'  //"a"
+```
+
+字符串可以被视为字符数组
+
+```javascript
+var s = 'hello';
+s[0] // "h"
+s[1] // "e"
+s[4] // "o"
+
+// 直接对字符串使用方括号运算符
+'hello'[1] // "e"
+
+var s = 'hello';
+s.length // 5
+```
+
+#### 对象
+
+对象就是一组**“键值对”（key-value）**的集合，是一种无序的复合数据集合。
+
+```javascript
+var obj = {
+  'foo': 'Hello',
+  'bar': 'World'
+};
+```
+
+对象的所有键名都是字符串（ES6 又引入了 Symbol 值也可以作为键名），所以加不加引号都可以。
+
+键名又称为“属性”（property）
+
+如果一个属性的值为函数，通常把这个属性称为“方法”
+
+对象是对内存地址的引用
+
+```javascript
+var o1 = {};
+var o2 = o1;
+
+o1.a = 1;
+o2.a // 1
+
+o2.b = 2;
+o1.b // 2
+```
+
+```javascript
+在圆括号里的一定是表达式
+eval('{foo: 123}') // 123
+eval('({foo: 123})') // {foo: 123}
+```
 
 
 
