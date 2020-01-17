@@ -186,8 +186,28 @@ eval('{foo: 123}') // 123
 eval('({foo: 123})') // {foo: 123}
 ```
 
+查看一个对象本身的所有属性，可以使用`Object.keys`方法。
 
+```
+var obj = {
+  key1: 1,
+  key2: 2
+};
 
+Object.keys(obj);
+// ['key1', 'key2']
+```
 
+```javascript
+with (document.links[0]){
+  console.log(href);
+  console.log(title);
+  console.log(style);
+}
+// 等同于
+console.log(document.links[0].href);
+console.log(document.links[0].title);
+console.log(document.links[0].style);
+```
 
 
