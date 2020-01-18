@@ -47,6 +47,32 @@ isNaN("hello")
 true
 isNaN(undefined)
 true
+
+
+Number()  // 将任意数据类型转换为数值
+parseInt() // 将字符串转换为整数，可指定基数
+parseFloat() // 将字符串转换为浮点数，不可指定基数
 ```
+
+
+- string
+```javascript
+'\u03a3'
+"Σ"
+var cc = '\u03a3'
+undefined
+cc.length
+1
+var aa=10
+aa.toString() //toString()方法转化为字符串，不可转换null和undefined
+
+String(null) // String()函数转换为字符串
+"null"
+String(undefined)
+"undefined"
+
+// 要把某个值转换为字符串，可以使用加号操作符（3.5 节讨论）把它与一个字符串（ "" ）加在一起
+```
+
 
 
