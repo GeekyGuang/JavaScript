@@ -93,5 +93,37 @@ String(undefined)
 动被添加到全局环境。
 
 - 如果局部环境中存在着同名标识符，就不会使用位于父环境中的标识符
+
+- object
+```javascript
+// 对象是引用类型(不能称作类)的实例
+// 创建object实例的方法有两种
+
+// 1 构造函数法
+var person = new object()
+person.name = "Nicholas"
+person.age = 27
+
+
+// 2 字面量表示法
+var person = {
+  name: "Nicholas",
+  "age": 20,   // 属性名可以使用字符串
+  5: "NewYork"  // 5会字段转换为字符串
+}
+
+// 或者
+var person = {}
+person.name = "Nicholas"
+person.age = 27
+
+// 访问对象属性
+person.name   // 点表示法
+person["name"]  // 方括号表示法，方括号内要用字符串或变量
+```
+
+
+
+
   
 
