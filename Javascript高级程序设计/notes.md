@@ -174,6 +174,57 @@ function compare(value1, value2){
     return value2 - value1;
 }
 
+// 操作方法
+// concat()方法基于原数组创建一个新的数组，并与参数合并
+var colors2 = colors.concat("yellow", ["black", "brown"])
+colors.slice(2)  //创建一个从位置2到数组最后的新数组
+colors.slice(2,3)  //位置2到3(不包括3)创建一个新数组
+// concat()和slice()不会改变原数组
+
+splice(起始位置,删除的项数,插入的值1,插入的值2,...) //拼接,返回的是删除的值
+colors.splice(1,2,'purple','white','grey') // 位置1开始删除2项插入3项
+colors.splice(0,colors.length)  // 清空数组
+// splice()会改变数组
+
+/* 长一样的对象不是同一个对象 */
+var person = {name: "aaa"}
+var person2 = {name: "aaa"}
+person == person2
+// false
+person.name = "bbb"
+person2
+// {name: "aaa"}
+
+indexOf(要查找的值, 起始索引位置(可省略))  // 查找不到返回-1
+lastIndexOf(要查找的值, 起始索引位置(可省略))
+
+// 迭代方法, 即对数组的每一项都执行相应函数，并返回需要的值
+every()
+filter()
+forEach()
+map()
+some()
+
+// 归并方法
+reduce()
+reduceRight()
+
+```
+- RegExp正则表达式
+```javascript
+var expression = / pattern / flags;
+
+// 三种flags
+g global
+i case-insensitive
+m multiline
+
+var pattern1 = /at/g;  // 中间可以加空格吗？？？
+var pattern2 = /[bc]at/i;
+var pattern3 = /.at/gi;
+
+// 使用构造函数
+var pattern4 = new RegExp("[bc]at", "i");
 ```
 
 
