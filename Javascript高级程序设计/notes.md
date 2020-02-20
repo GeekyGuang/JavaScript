@@ -100,7 +100,7 @@ String(undefined)
 // 创建object实例的方法有两种
 
 // 1 构造函数法
-var person = new object()
+var person = new Object()  // 注意O要大写
 person.name = "Nicholas"
 person.age = 27
 
@@ -122,7 +122,29 @@ person.name   // 点表示法
 person["name"]  // 方括号表示法，方括号内要用字符串或变量
 ```
 
+- Array
+```javascript
+// 创建数组类型的方法有两种
+// 1. 构造函数
+var colors = new Array()
+var colors = Array() // new可以省略
+var colors = new Array(10) // 指定数组length
+var colors = new Array('red', 'blue', 'green') //指定项
 
+// 2. 字面量表示法
+var colors = ['red', 'blue', 'green']
+
+// 访问数字, 通过数字索引
+colors[0] = 'yellow'
+
+// 修改length删掉后面的项
+colors.length = 2
+
+// 在最后面插入一项
+colors[colors.length] = 'pink'
+colors[colors.length] = 'purple' // 可以不断忘后面加
+
+```
 
 
   
