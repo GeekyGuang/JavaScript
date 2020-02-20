@@ -144,7 +144,38 @@ colors.length = 2
 colors[colors.length] = 'pink'
 colors[colors.length] = 'purple' // 可以不断忘后面加
 
+
+// 检测数组
+if (colors instanceof Array){}
+// 或者
+if (Array.isArray(colors)){}
+
+// 转换方法
+colors.toLocaleString()
+colors.toString()
+colors.join(',')  // 连接，可以指定连接符号
+// 以上三个输出的都是字符串，undefined值显示为空
+colors.valueOf()  // 输出的是数组,如有undefined值则显示为undefined
+
+// 栈方法
+colors.push('green','blue')  //在最后插入，并返回插入后length
+colors.pop()  // 弹出最后一项，并返回最后一项的值
+
+// 队列方法
+colors.unshift('green','blue','purple') // 在前面插入，返回length
+colors.shift()  // 弹出第一项，返回弹出的值
+
+// 排序方法
+colors.sort(compare)  // 转字符串值重排，可传入比较函数
+colors.reverse() // 反转
+
+// 比较函数
+function compare(value1, value2){
+    return value2 - value1;
+}
+
 ```
+
 
 
   
