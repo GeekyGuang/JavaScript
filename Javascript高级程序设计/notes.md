@@ -227,6 +227,18 @@ var pattern3 = /.at/gi;
 var pattern4 = new RegExp("[bc]at", "i");
 ```
 
+- 函数
+```javascript
+/*  用函数声明语法定义 */
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+/* 用函数表达式定义 */
+var sum = function(num1, num2){
+  return num1 + num2;
+};  //分号可以不加，但最好加上
+```
 
 
   
