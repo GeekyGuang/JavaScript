@@ -238,6 +238,24 @@ function sum(num1, num2) {
 var sum = function(num1, num2){
   return num1 + num2;
 };  //分号可以不加，但最好加上
+
+// 解析器会率先读取函数声明(声明提升)，并使其在执行任何代码之前可用（可以访问）；至于函数表达式，则必须等到解析器执行到它所在的代码行，才会真正被解释执行。
+
+// 函数没有重载
+
+/* 函数作为参数 */
+function callSomeFunction(someFunction, someArgument){
+    return someFunction(someArgument);
+}
+
+function add10(num){
+    return num + 10;
+}
+
+var result = callSomeFunction(add10, 10);
+alert(result);
+
+
 ```
 
 
