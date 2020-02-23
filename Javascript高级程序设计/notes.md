@@ -258,6 +258,12 @@ alert(result);
 
 ```
 
-
+- string
+```javascript
+var stringValue = "Hello World";
+stringValue.charAt(6)  // "W"
+stringValue.charCodeAt(7) // 返回字符编码111
+stringValue[1] // "e" 方括号访问
+``` 
   
 
