@@ -265,5 +265,49 @@ stringValue.charAt(6)  // "W"
 stringValue.charCodeAt(7) // 返回字符编码111
 stringValue[1] // "e" 方括号访问
 ``` 
+
+- 面向对象
+```javascript
+/* 工厂模式 */
+function createPerson(name, age, job){
+var o = new Object();
+o.name = name;
+o.age = age;
+o.job = job;
+o.sayName = function(){
+alert(this.name);
+};
+return o;
+}
+var person1 = createPerson("Nicholas", 29, "Software Engineer");
+var person2 = createPerson("Greg", 27, "Doctor");
+
+/* 构造函数模式 */
+function Person(name, age, job){   // 构造函数首字母大写
+this.name = name;
+this.age = age;
+this.job = job;
+this.sayName = function(){
+alert(this.name);
+};
+}
+var person1 = new Person("Nicholas", 29, "Software Engineer"); // 使用new
+var person2 = new Person("Greg", 27, "Doctor");
+
+/* 原型模式 */
+function Person(){
+}
+Person.prototype.name = "Nicholas";
+Person.prototype.age = 29;
+Person.prototype.job = "Software Engineer";
+Person.prototype.sayName = function(){
+alert(this.name);
+};
+var person1 = new Person();
+person1.sayName(); //"Nicholas"
+var person2 = new Person();
+person2.sayName(); //"Nicholas"
+alert(person1.sayName == person2.sayName); //true
+```
   
 
